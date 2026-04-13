@@ -22,3 +22,6 @@ def get_compliment():
 @app.get("/compliment/{name}")
 def get_personal_compliment(name: str):
     return {"message": f"{name}, {random.choice(compliments)}."}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
